@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: e616bf89ba15aa942acfcf53538d7885
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _MainTex: {fileID: 2800000, guid: 041b4af7853bef34eab55d30ac2bc8f0, type: 3}
+  - _UVIslands: {fileID: 2800000, guid: 041b4af7853bef34eab55d30ac2bc8f0, type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
