@@ -7,6 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class UIManager : MonoBehaviour
 {
+    public PaintManager paintManager;
     public Paintable[] paintables;
 
     // UI Elements
@@ -15,6 +16,7 @@ public class UIManager : MonoBehaviour
     public Button resetButton;
     public Button addLayerButton;
     public Button toggleEraseModeButton; // Нова кнопка для перемикання режимів
+    public Button toggleRotateModeButton; // Нова кнопка для перемикання режиму обертання
     public Slider radiusSlider;
     public Slider strengthSlider;
     public Slider hardnessSlider;
@@ -32,6 +34,7 @@ public class UIManager : MonoBehaviour
         loadButton.onClick.AddListener(LoadTexture);
         resetButton.onClick.AddListener(ResetAllPaintables);
         toggleEraseModeButton.onClick.AddListener(ToggleEraseMode); // Додаємо слухач подій для нової кнопки
+        toggleRotateModeButton.onClick.AddListener(ToggleRotateMode); // Додаємо слухач подій для нової кнопки
 
         // Assign slider value change events
         radiusSlider.onValueChanged.AddListener(ChangeRadius);
@@ -47,6 +50,20 @@ public class UIManager : MonoBehaviour
         UpdateBrushPreviewImage();
     }
 
+    public void AddLayerTexture()
+    {
+        // Implementation needed
+    }
+
+    public void PrevLayer()
+    {
+        // Implementation needed
+    }
+
+    public void NextLayer()
+    {
+        // Implementation needed
+    }
 
     public void ChangeRadius(float value)
     {
@@ -87,6 +104,21 @@ public class UIManager : MonoBehaviour
 
         // Update the color of the brush preview
         brushPreviewImage.color = new Color(mousePainter.paintColor.r, mousePainter.paintColor.g, mousePainter.paintColor.b, color.a);
+    }
+
+    private void InitializeLayerDropdown()
+    {
+        // Implementation needed
+    }
+
+    private void UpdateLayerDropdown()
+    {
+        // Implementation needed
+    }
+
+    private void ChangeActiveLayer(int index)
+    {
+        // Implementation needed
     }
 
     public void SaveTexture()
@@ -195,5 +227,10 @@ public class UIManager : MonoBehaviour
     private void ToggleEraseMode()
     {
         mousePainter.ToggleEraseMode();
+    }
+
+    private void ToggleRotateMode()
+    {
+        mousePainter.ToggleRotateMode();
     }
 }
